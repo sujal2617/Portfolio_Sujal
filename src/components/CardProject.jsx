@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 
@@ -79,6 +81,14 @@ const CardProject = ({ Img, Title, Description, Link: projectLink, id }) => {
         </div>
       </div>
   );
+};
+
+CardProject.propTypes = {
+  Img: PropTypes.string.isRequired,
+  Title: PropTypes.string.isRequired,
+  Description: PropTypes.string.isRequired,
+  Link: PropTypes.string,
+  id: PropTypes.string
 };
 
 export default CardProject;
